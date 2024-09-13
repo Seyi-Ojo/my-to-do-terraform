@@ -21,5 +21,7 @@ variable "environment" {
 }
 
 variable "user_data" {
-  type = string
+  type        = string
+  description = "The user data to configure the prod instance"
+  default     = null
 }

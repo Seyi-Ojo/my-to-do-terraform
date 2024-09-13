@@ -9,7 +9,8 @@ resource "aws_instance" "ec2_instance" {
   security_groups = [var.security_group]
 
   # Adding the user_data argument
-  user_data = var.user_data
+  # Conditionally add user_data if it's provided
+  user_data = var.user_data != null ? var.user_data : ""
 
   tags = {
     Name = "${var.environment}-instance"
