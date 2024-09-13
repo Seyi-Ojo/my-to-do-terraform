@@ -1,1 +1,4 @@
-# Contains Prod-specific outputs
+# Contains Dev-specific outputs
+output "public_instance_ip" {
+  value = aws_instance.public_instance.public_ip
+}
